@@ -13,8 +13,13 @@ from app.cli.payload import load_payload  # noqa: E402
 
 
 @traceable(name="investigation")
-def _run(raw_alert: dict) -> dict:
-    state = run_investigation("Incident", "unknown", "warning", raw_alert=raw_alert)
+def _run(
+    raw_alert: dict,
+    alert_name: str = "Incident",
+    pipeline_name: str = "unknown",
+    severity: str = "warning",
+) -> dict:
+    state = run_investigation(alert_name, pipeline_name, severity, raw_alert=raw_alert)
     return {
         "slack_message": state["slack_message"],
         "report": state["slack_message"],
