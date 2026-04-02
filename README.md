@@ -4,7 +4,7 @@
   <img width="2136" height="476" alt="github-readme-tracer-banner" src="https://github.com/user-attachments/assets/fac67ac2-e40e-4d58-8421-829ed0ce2a4d" />
 </p>
 
-<h1>OpenSRE: Build and Evaluate Your Own AI SRE Agents</h1>
+<h2>OpenSRE: Build and Evaluate Your Own AI SRE Agents</h2>
 
 <p>The open-source framework for AI SRE agents, and the training and evaluation environment they need to improve. Connect the tools you already run, define your own workflows, and investigate incidents on your own infrastructure.</p>
 
@@ -152,17 +152,6 @@ Tracer integrates with the systems that power modern data platforms.
 | **Infrastructure** | <img src="docs/assets/icons/kubernetes.png" width="16"> Kubernetes · <img src="docs/assets/icons/aws.png" width="16"> AWS · <img src="docs/assets/icons/gcp.jpg" width="16"> GCP · <img src="docs/assets/icons/azure.png" width="16"> Azure                    |
 | **Dev Tools**      | <img src="docs/assets/icons/github.webp" width="16"> GitHub                                                                                                                                                                                                    |
 | **Communication**  | <img src="docs/assets/icons/slack.png" width="16"> Slack · <img src="docs/assets/icons/pagerduty.png" width="16"> PagerDuty                                                                                                                                    |
-
----
-
-## Design Principles
-
-We've tried to be intentional about how Tracer is built, not just what it does.
-
-- **Real-world testing over mocks** - we're big fans of end-to-end testing against real environments, whether that's a local observability stack (Grafana, Prometheus) or actual cloud infrastructure. If it doesn't work in the real world, it doesn't count.
-- **Show your work** - every conclusion Tracer reaches should be traceable back to the signals that led there. No black boxes.
-- **Bring your own everything** - your LLM, your tools, your runbooks. Tracer fits around your stack, not the other way around.
-- **Open by default** - the code is yours to read, fork, and improve. We'd rather have a smaller, more trusted tool than a bigger, opaque one.
 
 ---
 
