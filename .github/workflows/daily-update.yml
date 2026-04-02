@@ -100,7 +100,7 @@ jobs:
             exit 1
           fi
 
-          if ! git status --short -- "$archive_path" | rg . >/dev/null; then
+          if [ -z "$(git status --short -- "$archive_path")" ]; then
             echo "No archive changes to commit."
             exit 0
           fi
