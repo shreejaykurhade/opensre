@@ -204,7 +204,13 @@ def _user_is_bot(user: dict[str, Any] | None) -> bool:
 
 def _name_looks_like_bot(name: str) -> bool:
     lowered = name.strip().lower()
-    return lowered.endswith("[bot]") or lowered.endswith(" bot")
+    return (
+        lowered.endswith("[bot]")
+        or lowered.endswith(" bot")
+        or "github action" in lowered
+        or "github-action" in lowered
+        or "contrib-readme-action" in lowered
+    )
 
 
 def _resolve_user_display_name(login: str, token: str, cache: dict[str, str]) -> str:

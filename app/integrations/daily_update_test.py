@@ -6,6 +6,7 @@ from app.integrations.daily_update import (
     Contributor,
     PullRequestSummary,
     _github_repo_api_url,
+    _name_looks_like_bot,
     build_daily_update,
     build_fallback_highlights,
     build_slack_payload,
@@ -59,6 +60,12 @@ def test_format_name_list_uses_oxford_comma() -> None:
     rendered = format_name_list(["vaibhav upreti", "paul", "Rohit Rajan"])
 
     assert rendered == "vaibhav upreti, paul, and Rohit Rajan"
+
+
+def test_name_looks_like_bot_filters_action_accounts() -> None:
+    assert _name_looks_like_bot("contrib-readme-action")
+    assert _name_looks_like_bot("GitHub Actions")
+    assert not _name_looks_like_bot("Tan Wee Joe")
 
 
 def test_github_repo_api_url_keeps_owner_repo_segments() -> None:
