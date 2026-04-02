@@ -5,6 +5,11 @@ from pathlib import Path
 from app.analytics import provider
 
 
+def test_base_properties_include_machine_architecture() -> None:
+    assert "machine_arch" in provider._BASE_PROPERTIES
+    assert provider._BASE_PROPERTIES["machine_arch"] != ""
+
+
 def test_is_opted_out_in_ci_environment(monkeypatch) -> None:
     monkeypatch.setenv("CI", "true")
 

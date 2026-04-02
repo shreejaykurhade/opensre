@@ -96,6 +96,7 @@ _BASE_PROPERTIES: Final[Properties] = {
     "python_version": platform.python_version(),
     "os_family": platform.system().lower(),
     "os_version": platform.release(),
+    "machine_arch": platform.machine().lower(),
     "$process_person_profile": False,
 }
 
