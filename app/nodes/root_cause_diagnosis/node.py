@@ -1,7 +1,9 @@
 """Root cause diagnosis node - orchestration and entry point."""
 
 import os
+from typing import Optional
 
+from langchain_core.runnables import RunnableConfig
 from langsmith import traceable
 
 from app.investigation_constants import MAX_INVESTIGATION_LOOPS
@@ -199,6 +201,9 @@ def _handle_insufficient_evidence(state: InvestigationState, tracker) -> dict:
 
 
 @traceable(name="node_diagnose_root_cause")
-def node_diagnose_root_cause(state: InvestigationState) -> dict:
+def node_diagnose_root_cause(
+    state: InvestigationState,
+    config: Optional[RunnableConfig] = None,  # noqa: ARG001,UP007,UP045
+) -> dict:
     """LangGraph node wrapper with LangSmith tracking."""
     return diagnose_root_cause(state)
