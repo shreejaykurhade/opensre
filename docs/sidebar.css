@@ -1,10 +1,37 @@
 /* Keep this file small: only sidebar/nav polish. */
+#sidebar .sidebar-group-header,
+#sidebar .sidebar-group-header h5,
+#navigation-items .sidebar-group-header,
+#navigation-items .sidebar-group-header h5 {
+  font-weight: 700 !important;
+}
+
 :root:not(.dark) #sidebar .sidebar-group-header,
 :root:not(.dark) #sidebar .sidebar-group-header h5,
 :root:not(.dark) #navigation-items .sidebar-group-header,
 :root:not(.dark) #navigation-items .sidebar-group-header h5 {
-  color: #000000;
-  font-weight: 600;
+  color: #000000 !important;
+}
+
+html.dark #sidebar .sidebar-group-header,
+html.dark #sidebar .sidebar-group-header h5,
+html.dark #navigation-items .sidebar-group-header,
+html.dark #navigation-items .sidebar-group-header h5 {
+  color: #ffffff !important;
+}
+
+/* Use the Tracer mark for the Tracer tab and swap to the white asset in dark mode. */
+header img[src*="Tracer-Head-Black.png"],
+header img[src*="Tracer-Head-White.png"],
+nav img[src*="Tracer-Head-Black.png"],
+nav img[src*="Tracer-Head-White.png"] {
+  width: 1rem !important;
+  height: 1rem !important;
+  object-fit: contain !important;
+}
+
+html.dark img[src*="Tracer-Head-Black.png"] {
+  filter: brightness(0) invert(1) !important;
 }
 
 /* Right sidebar ("On this page") alignment: keep TOC items + custom actions flush. */
@@ -75,4 +102,3 @@ nav[aria-label*="Table of contents"] a,
   width: 100% !important;
   text-align: left !important;
 }
-

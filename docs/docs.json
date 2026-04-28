@@ -43,8 +43,8 @@
         "groups": [
           {
             "group": "Investigation workflow",
-            "root": "investigation-overview",
             "pages": [
+              "investigation-overview",
               "remote-runtime-investigation",
               "masking",
               "multi-instance-integrations"
@@ -58,8 +58,7 @@
         "groups": [
           {
             "group": "Overview",
-            "root": "integrations-overview",
-            "pages": []
+            "pages": ["integrations-overview"]
           },
           {
             "group": "Observability and incidents",
@@ -113,8 +112,7 @@
         "groups": [
           {
             "group": "Getting started",
-            "root": "introduction-monitoring",
-            "pages": ["quickstart-monitoring"]
+            "pages": ["introduction-monitoring", "quickstart-monitoring"]
           },
           {
             "group": "Use cases",
@@ -137,8 +135,8 @@
           },
           {
             "group": "Frameworks",
-            "root": "integrations/overview",
             "pages": [
+              "integrations/overview",
               "integrations/nextflow",
               "integrations/wdl",
               "integrations/bash",
@@ -150,18 +148,19 @@
       },
       {
         "tab": "Tracer",
-        "icon": "layers-group",
+        "icon": "/images/logo/tracer/Tracer-Head-Black.png",
         "groups": [
           {
             "group": "Technology",
-            "root": "technology/end-to-end",
             "pages": [
+              "technology/end-to-end",
               "technology/our-features",
               "technology/how-it-works",
               "technology/product-benefits",
               "technology/tracer-agent",
               {
                 "group": "OpenSRE products",
+                "expanded": true,
                 "pages": [
                   "technology/tracer-collect",
                   "technology/tracer-tune",
@@ -177,8 +176,8 @@
           },
           {
             "group": "Deployment environments",
-            "root": "environments/overview",
             "pages": [
+              "environments/overview",
               "environments/codespaces",
               "environments/linux-cloud",
               "environments/aws-batch",
@@ -191,10 +190,11 @@
           },
           {
             "group": "Comparisons",
-            "root": "comparisons/overview",
             "pages": [
+              "comparisons/overview",
               {
                 "group": "Workflow orchestration",
+                "expanded": true,
                 "pages": [
                   "comparisons/workflow-orchestration",
                   "comparisons/Tracer_vs_Airflow",
@@ -206,6 +206,7 @@
               },
               {
                 "group": "Observability",
+                "expanded": true,
                 "pages": [
                   "comparisons/observability-tools",
                   "comparisons/Tracer_vs_Datadog",
@@ -215,6 +216,7 @@
               },
               {
                 "group": "Cloud native",
+                "expanded": true,
                 "pages": [
                   "comparisons/cloud-native-monitoring",
                   "comparisons/Tracer_vs_AWS_CloudWatch"
@@ -230,8 +232,7 @@
         "groups": [
           {
             "group": "Daily updates",
-            "root": "daily-updates/overview",
-            "pages": []
+            "pages": ["daily-updates/overview"]
           }
         ]
       }
@@ -258,7 +259,8 @@
       },
       {
         "label": "OpenSRE Cloud",
-        "href": "https://app.tracer.cloud/"
+        "href": "https://app.tracer.cloud/",
+        "icon": "/images/logo/tracer/Tracer-Head-Black.png"
       }
     ]
   },
